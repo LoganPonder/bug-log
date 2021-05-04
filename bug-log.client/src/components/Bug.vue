@@ -5,7 +5,7 @@
         {{ bug.title }}
       </th>
     </router-link>
-    <td> <img :src="state.user.picture" alt=""> {{ state.user.nickname }}</td>
+    <td> <img class="bug-avatar" :src="state.user.picture" alt=""> {{ state.user.nickname }}</td>
     <td class="closed" v-if="bug.closed">
       CLOSED
     </td>
@@ -59,8 +59,8 @@ export default ({
   color: #fff;
 }
 
-img {
-  height:2rem;
-  border-radius: 50%
+.bug-avatar {
+  height: 2rem;
+  border-radius: 50%;
 }
 </style>

@@ -18,8 +18,9 @@
           </button>
         </div>
         <div class="subheading-content d-flex justify-content-between">
-          <div class="author d-flex align-items-center">
-            <small class="mr-2">Reported by:</small>
+          <div class="author d-flex align-items-center mb-3">
+            <small class="mr-3">Reported by:</small>
+            <img class="bug-author-img mr-2" :src="state.activeBug.creator.picture" alt="">
             <h3 class="author-name">
               {{ state.activeBug.creator.name }}
             </h3>
@@ -232,6 +233,11 @@ table {
 h2 {
   font-size: 4rem;
   font-weight: 100;
+}
+
+.bug-author-img {
+  border-radius: 50%;
+  height: 3rem;
 }
 
   .close-btn,
